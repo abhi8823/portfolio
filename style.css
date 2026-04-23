@@ -1,6 +1,17 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --primary: #3b82f6;
+  --secondary: #9333ea;
+  --bg-dark: #0f172a;
+  --bg-light: #1e293b;
+  --text: #e2e8f0;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,111 +19,108 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Background Gradient */
+/* Body */
 body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: #e2e8f0;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-light));
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
 nav {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 15px 5%;
+  transition: 0.3s;
+}
+
+nav a {
+  color: var(--text);
+  margin: 0 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: var(--primary);
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* Hero Section */
-section:first-of-type {
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
 /* Headings */
 h2 {
-  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
   position: relative;
 }
 
 h2::after {
   content: "";
-  width: 50px;
+  width: 60px;
   height: 3px;
-  background: #3b82f6;
+  background: var(--primary);
   display: block;
-  margin-top: 8px;
+  margin: 10px auto 0;
   border-radius: 10px;
 }
 
-/* Skill Cards */
-.skill-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
+/* Cards Base */
+.card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
   padding: 20px;
-  border-radius: 15px;
+  transition: 0.4s ease;
+}
+
+/* Skills */
+.skill-card {
+  composes: card;
   text-align: center;
   font-weight: 500;
-  transition: 0.3s;
 }
 
 .skill-card:hover {
-  transform: translateY(-8px) scale(1.05);
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
-}
-
-/* Project Cards */
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 18px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 40px rgba(0,0,0,0.6);
-}
-
-/* Contact Buttons */
-.contact-btn {
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-  padding: 10px 18px;
-  border-radius: 25px;
-  transition: 0.3s;
-  display: inline-block;
-}
-
-.contact-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 5px 20px rgba(147,51,234,0.6);
-}
-
-/* Links */
-a {
-  transition: 0.3s;
-}
-
-a:hover {
-  color: #60a5fa;
-}
-
-/* Smooth Animation */
-section {
-  animation: fadeUp 0.8s ease-in-out;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  box-shadow: 0 15px 40px rgba(0,0
