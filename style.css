@@ -1,14 +1,14 @@
+
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary: #3b82f6;
   --secondary: #9333ea;
+  --accent: #06b6d4;
   --bg-dark: #0f172a;
   --bg-light: #1e293b;
   --text: #e2e8f0;
-  --glass: rgba(255, 255, 255, 0.08);
-  --border: rgba(255, 255, 255, 0.15);
 }
 
 /* Reset */
@@ -21,7 +21,7 @@
 
 /* Body */
 body {
-  background: linear-gradient(135deg, var(--bg-dark), var(--bg-light));
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: var(--text);
 }
 
@@ -30,14 +30,19 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 5%;
-  background: var(--glass);
-  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
 }
 
 nav a {
   margin: 0 10px;
   color: white;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
 }
 
 /* Hero */
@@ -47,40 +52,53 @@ nav a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, #3b82f6, #9333ea, #06b6d4);
+  background-size: 300% 300%;
+  animation: gradientMove 6s infinite alternate;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% { background-position: left; }
+  100% { background-position: right; }
 }
 
 /* Section */
 section {
-  padding: 50px 5%;
+  padding: 60px 5%;
   text-align: center;
 }
 
 /* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
 }
 
-/* Cards */
-.skill-card, .project-card {
-  background: var(--glass);
+/* Skill Cards */
+.skill-card {
   padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.4s;
 }
 
-.skill-card:hover, .project-card:hover {
-  transform: translateY(-10px);
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-}
-
-/* Button */
-.btn {
-  padding: 10px 20px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-radius: 20px;
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
   color: white;
-  text-decoration: none;
+  box-shadow: 0 15px 40px rgba(147,51,234,0.6);
 }
+
+/* Project Cards */
+.project-card {
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  transition: 0.4
