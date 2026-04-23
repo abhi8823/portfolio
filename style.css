@@ -1,5 +1,5 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
   margin: 0;
@@ -8,100 +8,28 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Body */
+/* Background Gradient */
 body {
-  background: linear-gradient(120deg, #f0f4ff, #f9f9ff);
-  color: #1f2937;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
 }
 
-/* Navbar (Glass Effect) */
+/* Navbar */
 nav {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Hero Gradient Animation */
+/* Hero Section */
 section:first-of-type {
-  background: linear-gradient(-45deg, #3b82f6, #9333ea, #ec4899, #6366f1);
-  background-size: 400% 400%;
-  animation: gradientBG 8s ease infinite;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Skill Cards (Glass + Glow) */
-.skill-card {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  font-weight: 600;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-.skill-card:hover {
-  transform: translateY(-8px) scale(1.05);
   background: linear-gradient(135deg, #3b82f6, #9333ea);
-  color: white;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-/* Project Cards */
-.project-card {
-  background: white;
-  border-radius: 18px;
-  padding: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #3b82f6, #9333ea);
-  top: 0;
-  left: 0;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-/* Contact Buttons */
-.contact-btn {
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-  color: white;
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.contact-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 /* Headings */
 h2 {
-  font-weight: 700;
   letter-spacing: 1px;
   position: relative;
 }
@@ -109,21 +37,79 @@ h2 {
 h2::after {
   content: "";
   width: 50px;
-  height: 4px;
+  height: 3px;
   background: #3b82f6;
   display: block;
-  margin-top: 5px;
+  margin-top: 8px;
+  border-radius: 10px;
 }
 
-/* Text Animation */
-h2, p {
-  animation: fadeUp 1s ease;
+/* Skill Cards */
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  color: white;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Contact Buttons */
+.contact-btn {
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  padding: 10px 18px;
+  border-radius: 25px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 20px rgba(147,51,234,0.6);
+}
+
+/* Links */
+a {
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #60a5fa;
+}
+
+/* Smooth Animation */
+section {
+  animation: fadeUp 0.8s ease-in-out;
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
