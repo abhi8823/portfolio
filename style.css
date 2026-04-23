@@ -1,4 +1,4 @@
-l/* Google Font */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -23,104 +23,64 @@ l/* Google Font */
 body {
   background: linear-gradient(135deg, var(--bg-dark), var(--bg-light));
   color: var(--text);
-  line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 /* Navbar */
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--glass);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
   padding: 15px 5%;
-  transition: 0.3s;
+  background: var(--glass);
+  backdrop-filter: blur(15px);
 }
 
 nav a {
-  color: var(--text);
-  margin: 0 15px;
-  font-weight: 500;
-  position: relative;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background: var(--primary);
-  transition: 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* Hero Section */
+/* Hero */
 .hero {
   height: 90vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
-  padding: 0 20px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.hero p {
-  margin-top: 10px;
-  opacity: 0.9;
-}
-
-/* Headings */
-h2 {
+/* Section */
+section {
+  padding: 50px 5%;
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  position: relative;
 }
 
-h2::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 10px;
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
 
-/* Cards Base */
-.card {
+/* Cards */
+.skill-card, .project-card {
   background: var(--glass);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(15px);
-  border-radius: 18px;
   padding: 20px;
-  transition: 0.4s ease;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-/* Skills */
-.skill-card {
-  composes: card;
-  text-align: center;
-  font-weight: 500;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px) scale(1.05);
+.skill-card:hover, .project-card:hover {
+  transform: translateY(-10px);
   background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* Button */
+.btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 20px;
   color: white;
-  box-shadow: 0 15px 40px rgba(0,0
+  text-decoration: none;
+}
