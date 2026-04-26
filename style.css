@@ -9,58 +9,48 @@
 
 /* Body */
 body {
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  color: #e2e8f0;
-  overflow-x: hidden;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #334155;
 }
 
-/* Navbar (Glass Effect) */
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 6%;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  position: sticky;
-  top: 0;
+  padding: 18px 6%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 nav a {
-  margin: 0 15px;
-  color: #cbd5f5;
+  margin: 0 12px;
   text-decoration: none;
+  color: #475569;
   font-weight: 500;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #38bdf8;
-  text-shadow: 0 0 10px #38bdf8;
+  color: #6366f1;
 }
 
-/* Hero (Neon Glow) */
+/* Hero */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 110px 20px;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: white;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
 }
 
 .hero h1 {
-  font-size: 3.2rem;
-  background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: glow 3s infinite alternate;
-}
-
-@keyframes glow {
-  from { text-shadow: 0 0 10px #38bdf8; }
-  to { text-shadow: 0 0 25px #a78bfa; }
+  font-size: 2.8rem;
 }
 
 .hero p {
-  margin-top: 15px;
-  opacity: 0.8;
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
 /* Section */
@@ -72,82 +62,37 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 2.2rem;
-  color: #38bdf8;
+  font-size: 2rem;
+  color: #1e293b;
 }
 
 /* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 
-/* Glass Cards (Skills) */
+/* Skill Card */
 .skill-card {
-  background: rgba(255,255,255,0.05);
+  background: #ffffff;
+  padding: 22px;
   border-radius: 15px;
-  padding: 20px;
   text-align: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.4s;
-  position: relative;
-}
-
-/* neon border effect */
-.skill-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 15px;
-  padding: 1px;
-  background: linear-gradient(45deg, #38bdf8, #a78bfa, #f472b6);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px) scale(1.05);
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: white;
 }
 
-/* Project Card (3D Tilt Feel) */
+/* Project Card */
 .project-card {
-  background: rgba(255,255,255,0.05);
+  background: #ffffff;
   padding: 22px;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
-  transform-style: preserve-3d;
-}
-
-.project-card:hover {
-  transform: rotateX(5deg) rotateY(-5deg) scale(1.05);
-}
-
-/* Buttons (Neon Pulse) */
-.contact-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #38bdf8, #a78bfa);
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-  box-shadow: 0 0 15px #38bdf8;
-}
-
-.contact-btn:hover {
-  box-shadow: 0 0 30px #a78bfa;
-  transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: transparent;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  color: #94a3b8;
-}
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05
