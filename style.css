@@ -8,7 +8,7 @@
 
 /* Body */
 body {
-  background: #f5f5f5;
+  background: #f5f7fa;
   color: #333;
 }
 
@@ -26,12 +26,26 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: #3b82f6;
+}
+
 /* Hero */
 .hero {
   text-align: center;
-  padding: 60px;
+  padding: 70px;
   background: #3b82f6;
   color: white;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: white;
+  color: #3b82f6;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 /* Section */
@@ -52,9 +66,23 @@ section {
 .card {
   background: white;
   padding: 20px;
-  width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background: #2563eb;
 }
 
 /* Footer */
