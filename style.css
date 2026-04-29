@@ -1,98 +1,52 @@
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 /* Body */
 body {
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  color: #334155;
+  background: linear-gradient(120deg, #eef2ff, #f8fafc);
+  color: #0f172a; /* dark text for better visibility */
 }
 
 /* Navbar */
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 18px 6%;
-  background: white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  background: #ffffff;
 }
 
 nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #475569;
-  font-weight: 500;
-  transition: 0.3s;
+  color: #1e293b;
 }
 
 nav a:hover {
-  color: #6366f1;
+  color: #4f46e5;
 }
 
 /* Hero */
 .hero {
-  text-align: center;
-  padding: 110px 20px;
-  background: linear-gradient(135deg, #6366f1, #ec4899);
-  color: white;
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
+  background: linear-gradient(135deg, #4f46e5, #db2777);
+  color: #ffffff;
 }
 
 .hero p {
-  margin-top: 10px;
-  opacity: 0.9;
+  color: #f1f5f9; /* halka light but readable */
 }
 
-/* Section */
-section {
-  padding: 70px 6%;
-}
-
-/* Heading */
+/* Headings */
 h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: #1e293b;
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  color: #0f172a;
 }
 
 /* Skill Card */
 .skill-card {
   background: #ffffff;
-  padding: 22px;
-  border-radius: 15px;
-  text-align: center;
-  font-weight: 500;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  color: #1e293b;
 }
 
 .skill-card:hover {
-  transform: translateY(-8px);
-  background: linear-gradient(135deg, #6366f1, #ec4899);
-  color: white;
+  background: linear-gradient(135deg, #4f46e5, #db2777);
+  color: #ffffff;
 }
 
 /* Project Card */
 .project-card {
   background: #ffffff;
-  padding: 22px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05
+  color: #1e293b;
+}
+
+/* Footer
