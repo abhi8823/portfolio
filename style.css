@@ -1,134 +1,52 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 /* Body */
 body {
   background: #0f172a;
   color: #f1f5f9;
+  font-family: sans-serif;
 }
 
 /* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 18px 6%;
+  padding: 15px;
   background: #020617;
-  position: sticky;
-  top: 0;
-}
-
-nav h1 {
-  color: #38bdf8;
 }
 
 nav a {
+  color: #cbd5f5;
   margin: 0 10px;
   text-decoration: none;
-  color: #cbd5f5;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #38bdf8;
 }
 
 /* Hero */
-section:first-of-type {
+.hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 100px;
   background: linear-gradient(135deg, #2563eb, #9333ea);
-  color: white;
 }
 
-section:first-of-type p {
-  color: #e2e8f0;
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: blue;
+  border-radius: 20px;
 }
 
-/* Sections */
-section {
-  padding: 60px 8%;
-}
-
-/* Headings */
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #f8fafc;
-}
-
-/* Skills */
-#skills {
-  background: #1e293b;
-}
-
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
-.skill-card {
-  background: #334155;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.skill-card:hover {
-  background: #2563eb;
-}
-
-/* Projects */
-#projects {
-  background: #0f172a;
-}
-
+/* Cards */
+.skill-card,
 .project-card {
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
-  transition: 0.3s;
-}
-
-.project-card p {
-  color: #cbd5f5;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-}
-
-/* Contact */
-#contact {
-  background: #1e293b;
-  text-align: center;
-}
-
-/* Buttons */
-.contact-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background: #2563eb;
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  margin: 5px;
-}
-
-.contact-btn:hover {
-  background: #1d4ed8;
-}
-
-/* Footer */
-footer {
-  background: #020617;
-  text-align: center;
-  padding: 15px;
-  color: #94a3b8;
 }
