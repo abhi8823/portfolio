@@ -1,94 +1,81 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
 }
 
-/* Body */
 body {
-  background: #f5f7fa;
-  color: #333;
+  background: #0f172a;
+  color: white;
 }
 
 /* Header */
 header {
-  background: #222;
-  color: white;
-  padding: 15px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
 }
 
 nav a {
-  margin: 0 10px;
-  color: white;
+  margin-left: 15px;
+  color: #94a3b8;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: #3b82f6;
+  color: #38bdf8;
 }
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 70px;
-  background: #3b82f6;
-  color: white;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
 }
 
 .hero a {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 15px;
-  background: white;
-  color: #3b82f6;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #38bdf8;
+  color: black;
   text-decoration: none;
-  border-radius: 5px;
 }
 
 /* Section */
 section {
-  padding: 40px;
-  text-align: center;
+  padding: 50px 40px;
 }
 
-/* Grid */
+/* Skills */
 .grid {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
-/* Card */
-.card {
-  background: white;
-  padding: 20px;
-  width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+.grid div {
+  padding: 10px 15px;
+  background: #1e293b;
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px 12px;
-  background: #3b82f6;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
+/* Projects */
+.project {
+  margin-top: 20px;
 }
 
-.card a:hover {
-  background: #2563eb;
+.project a {
+  color: #38bdf8;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #222;
-  color: white;
+  padding: 20px;
+  background: #020617;
 }
