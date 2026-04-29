@@ -1,52 +1,109 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Body */
 body {
-  background: linear-gradient(120deg, #eef2ff, #f8fafc);
-  color: #0f172a; /* dark text for better visibility */
+  background: #0f172a; /* dark background */
+  color: #f1f5f9; /* light text */
 }
 
 /* Navbar */
 nav {
-  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 6%;
+  background: #020617;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 nav a {
-  color: #1e293b;
+  margin: 0 12px;
+  text-decoration: none;
+  color: #cbd5f5;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #4f46e5;
+  color: #38bdf8;
 }
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #4f46e5, #db2777);
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #1d4ed8, #9333ea);
   color: #ffffff;
 }
 
-.hero p {
-  color: #f1f5f9; /* halka light but readable */
+.hero h1 {
+  font-size: 3rem;
 }
 
-/* Headings */
+.hero p {
+  margin-top: 10px;
+  color: #e2e8f0;
+}
+
+/* Section */
+section {
+  padding: 70px 6%;
+}
+
+/* Heading */
 h2 {
-  color: #0f172a;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #f8fafc;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
 }
 
 /* Skill Card */
 .skill-card {
-  background: #ffffff;
-  color: #1e293b;
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  color: #f1f5f9;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: 0.3s;
 }
 
 .skill-card:hover {
-  background: linear-gradient(135deg, #4f46e5, #db2777);
-  color: #ffffff;
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #2563eb, #9333ea);
 }
 
 /* Project Card */
 .project-card {
-  background: #ffffff;
-  color: #1e293b;
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  color: #f1f5f9;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: 0.3s;
 }
 
-/* Footer
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #94a3b8;
+}
